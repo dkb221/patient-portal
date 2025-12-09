@@ -1,0 +1,98 @@
+.upload-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.upload-section h2 {
+  color: #1F2937;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.file-input-wrapper input[type="file"] {
+  display: none;
+}
+
+.file-input-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 2px dashed #D1D5DB;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #F9FAFB;
+}
+
+.file-input-label:hover {
+  border-color: #4F46E5;
+  background: #EEF2FF;
+}
+
+.file-input-label svg {
+  color: #4F46E5;
+  flex-shrink: 0;
+}
+
+.file-input-label span {
+  color: #374151;
+  font-weight: 500;
+}
+
+.file-info {
+  background: #F3F4F6;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #4F46E5;
+}
+
+.file-info p {
+  color: #374151;
+  margin: 0.25rem 0;
+}
+
+.message {
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+}
+
+.message.success {
+  background: #D1FAE5;
+  color: #065F46;
+  border-left: 4px solid #10B981;
+}
+
+.message.error {
+  background: #FEE2E2;
+  color: #991B1B;
+  border-left: 4px solid #DC2626;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .upload-section {
+    padding: 1.5rem;
+  }
+}
