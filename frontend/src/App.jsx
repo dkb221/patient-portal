@@ -42,19 +42,22 @@ function App() {
       <Header />
       
       <main className="container">
-        <DocumentUpload onUploadSuccess={handleUploadSuccess} />
-        
         {error && (
           <div className="error-banner">
             {error}
           </div>
         )}
         
-        <DocumentList 
-          documents={documents}
-          loading={loading}
-          onDeleteSuccess={handleDeleteSuccess}
-        />
+        {/* NEW: Side-by-Side Grid Layout */}
+        <div className="main-grid">
+          <DocumentUpload onUploadSuccess={handleUploadSuccess} />
+          
+          <DocumentList 
+            documents={documents}
+            loading={loading}
+            onDeleteSuccess={handleDeleteSuccess}
+          />
+        </div>
       </main>
 
       <footer className="footer">
